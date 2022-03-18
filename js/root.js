@@ -1,9 +1,3 @@
-/* function sayHi(user) {
-    alert(`Hello, ${user}!`);
+export function func(param) {
+    console.log(param)
 }
-
-function sayBye(user) {
-    alert(`Bye, ${user}!`);
-}
-
-export { sayHi, sayBye }; // a list of exported variables */

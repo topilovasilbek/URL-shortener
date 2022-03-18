@@ -1,3 +1,3 @@
-/* import {sayHi, sayBye} from './root';
+import { func } from './root.js';
 
-sayHi() */
+func('bom bom')
