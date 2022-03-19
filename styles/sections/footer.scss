@@ -1,0 +1,148 @@
+// Boost part
+.boost-part {
+    padding: 40px 0;
+    box-sizing: border-box;
+
+    background: {
+        image: url($route-appCSS-to-images + '/bg-boost-desktop.svg');
+        repeat: no-repeat;
+        size: 100% 100%;
+        color: $darkViolet;
+    }
+
+    ;
+
+    @media screen and (max-width: 768px) {
+        background: {
+            image: url($route-appCSS-to-images + '/bg-boost-mobile.svg');
+        }
+
+        ;
+    }
+
+    .container {
+        @include globalContainer;
+        margin: 0 auto;
+        text-align: center;
+
+        .title {
+            font-weight: 700;
+            font-size: 2rem;
+            line-height: 2rem;
+            color: #fff;
+        }
+
+        button {
+            @include allButton;
+            margin-top: 20px;
+            padding: 15px 50px;
+            border-radius: 25px;
+        }
+    }
+}
+
+
+// Footer Part
+.footer-part {
+    padding: 20px 0 40px;
+    box-sizing: border-box;
+    background-color: $veryDarkViolet;
+
+    .container {
+        @include globalContainer;
+        margin: 0 auto;
+        display: flex;
+        align-items: flex-start;
+
+        .for-logo {
+            margin-top: 25px;
+            width: calc(100% / 3);
+
+            a {
+                svg {
+                    path {
+                        fill: #fff;
+                    }
+                }
+            }
+        }
+
+        .for-others {
+            width: calc(100% / 3 * 2);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+
+            .column {
+                width: 25%;
+                margin-top: 25px;
+
+                .title {
+                    margin-bottom: 20px;
+                    font-size: 1rem;
+                    color: #fff;
+                }
+
+                .link {
+                    margin-top: 10px;
+
+                    a {
+                        text-decoration: none;
+                        font-weight: 500;
+                        font-size: 1rem;
+                        line-height: 1.2rem;
+                        color: $grayishViolet;
+                        transition: 0.2s linear;
+
+                        &:hover {
+                            color: $cyan;
+                        }
+                    }
+                }
+            }
+
+            .logos {
+                margin-top: 25px;
+
+                a {
+                    text-decoration: none;
+                    margin: 0 5px;
+
+                    svg path {
+                        transition: 0.2s linear;
+                    }
+
+                    &:hover {
+                        svg {
+                            path {
+                                fill: $cyan;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 576px) {
+            text-align: center;
+            .for-others {
+                display: block;
+                .column {
+                    width: 100%;
+                }
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            display: block;
+            .for-logo {
+                width: 100%;
+            }
+            .for-others {
+                width: 100%;
+            }
+        }
+        
+    }
+}

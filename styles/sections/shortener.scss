@@ -1,0 +1,194 @@
+.shortener-part {
+    padding: 40px 0;
+    background: linear-gradient(to bottom, #fff 50%, $statisticsBack 50%);
+    .container {
+        @include globalContainer;
+        margin: 0 auto;
+
+        .box {
+            margin: 10px 0;
+            width: 100%;
+            border-radius: 8px;
+            padding: 50px 30px;
+            box-sizing: border-box;
+            background: {
+                image: url($route-appCSS-to-images + '/bg-shorten-desktop.svg');
+                repeat: no-repeat;
+                size: 100% 110%;
+                color: $darkViolet;
+            };
+            display: flex;
+            justify-content: space-between;
+            @media screen and (max-width: 768px) {
+                background: {
+                    image: url($route-appCSS-to-images + '/bg-shorten-mobile.svg');
+                    position-x: 100%;
+                    size: 50%;
+                };
+            }
+            
+            .form-group {
+                width: 76%;
+                display: block;
+                position: relative;
+
+                input {
+                    width: 100%;
+                    height: 50px;
+                    outline: none;
+                    border: 2px solid #fff;
+                    box-sizing: border-box;
+                    border-radius: 5px;
+                    padding: 8px 15px;
+                    color: $veryDarkViolet;
+                    font: {
+                        family: Poppins, sans-serif;
+                        size: 1rem;
+                        weight: 500
+                    }
+                }
+                label {
+                    position: absolute;
+                    top: 60px;
+                    left: 0;
+                    font-family: Poppins, sans-serif;
+                    font-size: 15px;
+                    font-style: italic;
+                    color: red;
+                    visibility: hidden;
+                }
+            }
+
+            button {
+                height: 50px;
+                width: 20%;
+                box-sizing: border-box;
+                border: none;
+                @include allButton;
+                border-radius: 5px;
+            }
+
+            &.error{
+                .form-group {
+                    input {
+                        border: 2px solid red;
+                    }
+                    label {
+                        visibility: visible;
+                    }
+                }
+                @media screen and (max-width: 768px) {
+                    button {
+                        margin-top: 25px !important;
+                    }
+                }
+            }
+
+            @media screen and (max-width: 768px) {
+                display: block !important;
+
+                .form-group {
+                    width: 100%;
+                    padding-bottom: 15px;
+                }
+
+                button {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.result {
+    background-color: $statisticsBack;
+    padding-bottom: 20px;
+
+    .container {
+        @include globalContainer;
+        margin: 0 auto;
+
+        .item {
+            margin-top: 20px;
+            box-sizing: border-box;
+            padding: 15px 0;
+            border-radius: 5px;
+            background-color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .left-side {
+                padding: 0 20px;
+                display: flex;
+                align-items: center;
+                max-width: 60%;
+                a {
+                    width: auto;
+                    text-decoration: none;
+                    color: $veryDarkViolet;
+                    word-wrap: break-word;
+                }
+            }
+            hr {
+                display: none;
+            }
+            .right-side {
+                padding: 0 20px;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                .shorten-link {
+                    text-decoration: none;
+                    color: $cyan;
+                }
+                button {
+                    margin-left: 30px;
+                    border: none;
+                    outline: none;
+                    padding: 5px 10px;
+                    box-sizing: border-box;
+                    font-family: Poppins, sans-serif;
+                    background-color: $cyan;
+                    color: #fff;
+                    border-radius: 5px;
+                    font-size: 20px;
+                    cursor: pointer;
+                    &.copied{
+                        background-color: $darkViolet;
+                    }
+                }
+            }
+
+            @media screen and (max-width: 768px) {
+                display: block;
+                .left-side {
+                    max-width: 100%;
+                }
+                hr {
+                    margin: 10px 0 8px;
+                    display: flex;
+                    border: none;
+                    height: 0.5px;
+                    background-color: $cyan;
+                    filter: blur(0.5px);
+                }
+                .right-side {
+                    display: block !important;
+                    .shorten-link {
+                        width: 100%;
+                    }
+                    button {
+                        margin: 15px 0 0;
+                        width: 100%;
+                    }
+                }
+            }
+
+        }
+        .item:first-of-type {
+            margin: 0;
+        }
+
+    }
+}
