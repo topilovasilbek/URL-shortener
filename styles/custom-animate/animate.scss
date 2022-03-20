@@ -1,0 +1,28 @@
+
+.animate_item_1 {
+    animation-duration: 1s;
+}
+
+.animate_item_2 {
+    animation-duration: 1.5s;
+}
+
+.animate_item_3 {
+    animation-duration: 2s;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+    box-shadow: inset 0 0 6px rgba($color: $cyan, $alpha: 1.0);
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: $cyan;
+}

@@ -1,3 +1,5 @@
+new WOW().init();
+
 const hamburgerSvg = document.getElementById('hamburger-svg');
 const hamburgerAbsolute = document.getElementById('hamburger-absolute');
 const mobileMenu = document.getElementById('mobile-menu');
